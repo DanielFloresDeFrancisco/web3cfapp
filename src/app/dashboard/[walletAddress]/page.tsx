@@ -7,6 +7,7 @@ import { getContract } from "thirdweb";
 import { sepolia } from "thirdweb/chains";
 import { deployPublishedContract } from "thirdweb/deploys";
 import { useActiveAccount, useReadContract } from "thirdweb/react"
+import { BigNumber } from "ethers";
 
 export default function DashboardPage() {
     const account = useActiveAccount();
@@ -93,7 +94,7 @@ const CreateCampaignModal = (
                     campaignDeadline
                 ],
                 publisher: "0x69cC7b66cf666E8fD5A9082Db124Ab91335Ec1da", // My wallet address
-                version: "1.0.0",
+                version: "1.0.2",
             });
             alert("Contract deployed successfully!");
         } catch (error) {
